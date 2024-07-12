@@ -1,0 +1,19 @@
+.App {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/***user table***/
+.userTable th {
+  @apply border text-base font-medium border-black;
+}
+
+.userTable td {
+  @apply border text-base text-center border-black;
+}
+
+/**scrollbar hidden****/
+.scrollbar-none::-webkit-scrollbar {
+  display: none;
+}
