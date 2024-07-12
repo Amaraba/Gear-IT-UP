@@ -61,7 +61,7 @@ const Header = () => {
             <Link to={"/"}>
               <img
                 className="h-8 sm:h-12 min-w-min"
-                src="public/logo.jpg"
+                src="logo.jpg"
                 alt="logo"
               />
             </Link>
@@ -165,7 +165,7 @@ const Header = () => {
               >
                 <span className="w-9">
                   {/* <img src="src\assets\cart.svg" alt="cart" /> */}
-                  <img src="public\cart.svg" alt="cart" />
+                  <img src="cart.svg" alt="cart" />
                 </span>
                 <div className="text-white flex items-center justify-center absolute m-auto">
                   <p className=" text-lg">{context?.cartProductCount}</p>
