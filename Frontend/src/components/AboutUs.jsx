@@ -55,7 +55,8 @@ const AboutUs = () => {
             </div>
           </div>
           <div className="gap-2 justify-center items-center">
-            <div className=" ">1234567890</div>
+            {/* <div className=" ">1234567890</div> */}
+            <a className="cursor-pointer underline underline-offset-4" href="https://wa.me/message/Y33ZSJGWCOKJL1">8884433663</a>
           </div>
 
           <div className="gap-2 justify-center items-center">

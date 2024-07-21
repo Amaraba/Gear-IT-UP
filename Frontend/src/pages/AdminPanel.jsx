@@ -16,7 +16,7 @@ const AdminPanel = () => {
 
   return (
     <div className="min-h-[calc(100vh-96px)] flex">
-      <aside className=" bg-lightgray min-h-full w-full max-w-64">
+      <aside className=" bg-lightgray min-h-full w-full max-w-64 max-sm:max-w-fit">
         <div className="flex justify-center items-center flex-col">
           <div className=" text-5xl flex justify-center mt-5 text-orange">
             <BiSolidUserCircle />

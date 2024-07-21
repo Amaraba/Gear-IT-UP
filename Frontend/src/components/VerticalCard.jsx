@@ -70,12 +70,24 @@ const VerticalCard = ({ loading, data = [] }) => {
                       {displayINRCurrency(product?.price)}
                     </p>
                   </div>
-                  <button
+                  {/* <button
                     className="text-sm bg-orange hover:bg-darkslategray-400 text-white px-3 py-1 rounded-full"
                     onClick={(e) => handleAddToCart(e, product?._id)}
                   >
                     Add to Cart
-                  </button>
+                  </button> */}
+                  {product?.stockQuantity == 0 ? (
+                    <button className="text-sm bg-red text-white w-full justify-self-center px-3 py-1 rounded-full cursor-default">
+                      Out of Stock
+                    </button>
+                  ) : (
+                    <button
+                      className="text-sm bg-orange hover:bg-darkslategray-400 text-white w-full justify-self-center px-3 py-1 rounded-full"
+                      onClick={(e) => handleAddToCart(e, product?._id)}
+                    >
+                      Add to Cart
+                    </button>
+                  )}
                 </div>
               </Link>
             );

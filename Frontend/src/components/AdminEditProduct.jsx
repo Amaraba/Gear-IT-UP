@@ -18,6 +18,7 @@ const AdminEditProduct = ({ onClose, productData, fetchdata }) => {
     description: productData?.description,
     price: productData?.price,
     sellingPrice: productData?.sellingPrice,
+    stockQuantity: productData?.stockQuantity,
   });
   const [openFullScreenImage, setOpenFullScreenImage] = useState(false);
   const [fullScreenImage, setFullScreenImage] = useState("");
@@ -108,7 +109,7 @@ const AdminEditProduct = ({ onClose, productData, fetchdata }) => {
           <input
             type="text"
             id="productName"
-            placeholder="enter product name"
+            placeholder="Enter product name"
             name="productName"
             value={data.productName}
             onChange={handleOnChange}
@@ -122,7 +123,7 @@ const AdminEditProduct = ({ onClose, productData, fetchdata }) => {
           <input
             type="text"
             id="brandName"
-            placeholder="enter brand name"
+            placeholder="Enter brand name"
             value={data.brandName}
             name="brandName"
             onChange={handleOnChange}
@@ -211,7 +212,7 @@ const AdminEditProduct = ({ onClose, productData, fetchdata }) => {
           <input
             type="number"
             id="price"
-            placeholder="enter price"
+            placeholder="Enter price"
             value={data.price}
             name="price"
             onChange={handleOnChange}
@@ -225,9 +226,23 @@ const AdminEditProduct = ({ onClose, productData, fetchdata }) => {
           <input
             type="number"
             id="sellingPrice"
-            placeholder="enter selling price"
+            placeholder="Enter selling price"
             value={data.sellingPrice}
             name="sellingPrice"
+            onChange={handleOnChange}
+            className="p-2 bg-slate-100 border rounded"
+            required
+          />
+
+          <label htmlFor="stockQuantity" className="mt-3">
+            Available Stock :
+          </label>
+          <input
+            type="number"
+            id="stockQuantity"
+            placeholder="Enter Stock Quantity"
+            value={data.stockQuantity}
+            name="stockQuantity"
             onChange={handleOnChange}
             className="p-2 bg-slate-100 border rounded"
             required

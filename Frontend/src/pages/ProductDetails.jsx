@@ -210,18 +210,40 @@ const ProductDetails = () => {
             </div>
 
             <div className="flex items-center gap-3 my-2">
-              <button
+              {/* <button
+                className="border-2 border-slate-500 rounded px-3 py-1 min-w-[120px]  text-orange font-medium hover:bg-darkslategray-400 hover:text-white"
+                onClick={(e) => handleBuyProduct(e, data?._id)}
+              >
+                Buy
+              </button> */}
+              {data.stockQuantity == 0 ? (
+                ""
+              ) : (
+                <button
                 className="border-2 border-slate-500 rounded px-3 py-1 min-w-[120px]  text-orange font-medium hover:bg-darkslategray-400 hover:text-white"
                 onClick={(e) => handleBuyProduct(e, data?._id)}
               >
                 Buy
               </button>
-              <button
+              )}
+              {/* <button
                 className="border-2 border-slate-500 rounded px-3 py-1 min-w-[120px] font-medium text-orange hover:text-white hover:bg-darkslategray-400"
                 onClick={(e) => handleAddToCart(e, data?._id)}
               >
                 Add To Cart
-              </button>
+              </button> */}
+              {data.stockQuantity == 0 ? (
+                <button className="border-2 border-slate-500 cursor-default rounded px-3 py-1 min-w-[120px] font-medium bg-red text-white">
+                  Out of Stock
+                </button>
+              ) : (
+                <button
+                  className="border-2 border-slate-500 rounded px-3 py-1 min-w-[120px] font-medium text-orange hover:text-white hover:bg-darkslategray-400"
+                  onClick={(e) => handleAddToCart(e, data?._id)}
+                >
+                  Add To Cart
+                </button>
+              )}
             </div>
 
             <div>

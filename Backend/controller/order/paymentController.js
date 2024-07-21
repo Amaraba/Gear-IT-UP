@@ -20,6 +20,9 @@ const paymentController = async (request, response) => {
           shipping_rate: "shr_1PZG9HRtWfeFjtUpwNdB4wN6",
         },
       ],
+      phone_number_collection: {
+        enabled: true,
+      },
       customer_email: user.email,
       metadata: {
         userId: request.userId,
